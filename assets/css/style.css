@@ -1,0 +1,105 @@
+* {
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+ul, ol {
+	list-style: none;
+}
+
+body {
+	font-family: 'Patua One', cursive;
+}
+
+.slideShow {
+	width: 100%;
+	position: relative;
+}
+
+.slider li, ul {
+	width: 100%;
+}
+
+.slider li img {
+	width: 100%;
+}
+
+.slider .caption {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	font-size: 100px;
+	top: 0px;
+	left: 0px;
+	justify-content: center;
+	display: flex;
+	color: #fff;
+	align-items: center;
+	text-align: center;
+	z-index: 1;
+}
+
+.pagination {
+	position: absolute;
+	top: 102%;
+	display: flex;
+	width: 100%;
+	justify-content: center;
+}
+
+.left, .right {
+	position: absolute;
+	top: 0px;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	color: #fff;
+	font-size: 35px;
+}
+
+.left {
+	left: 10px;
+}
+
+.right {
+	right: 10px;
+}
+
+.pagination li {
+	font-size: 20px;
+	margin: 2px 5px;
+	color: #858585;
+}
+
+
+@media screen and (max-width: 600px){
+	/*Le decimos que si la pantalla llega a 600px el parrafo desaparezca*/
+	.slider .caption p{
+		display: none;
+	}
+
+	.slider .caption h1{
+		/*Decimos que el texto h1 cambie de tamaño al hacer responsive*/
+		font-size: 35px;
+	}
+
+	.left .right {
+		/*Las flechas cambian de tamaño al hacer responsive*/
+		font-size: 30px;
+	}
+
+	.slider li img {
+		/*que la imagen al hacer responsive no altere su altura*/
+		width: 600px;
+	}
+
+	.pagination {
+		/*Al momento de hacer responsive, los puntos desaparezcan*/
+		display: none;
+	}
+
+	};
+
